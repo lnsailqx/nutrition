@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"/> --> 
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>Dshare</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+	<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/lore.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/yanzheng.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="wrap-main">
+			<div class="header">
+				<img src="../img/appicon.png" alt="">
+			</div>
+			<div class="content">
+				<div class="wrap-lore">
+					<div class="wrap-lore-cent">
+						<a href="#log" class="swi-log">登陆</a>
+						<a href="#reg" class="swi-reg">注册</a>
+					</div>
+				</div>
+				<div class="regiframe">
+				<form class="reginform" name="regform"  method="post" action="../php/register.php">
+					<input type="text" class="inputtext" id="id" placeholder="ID" name="username">
+					<input type="password" class="inputtext" id="password" placeholder="密码" name="password">
+					<input type="password" class="inputtext" id="repassword" placeholder="确认密码">
+					<input type="text" class="inputtext" id="name" placeholder="昵称" name="name">
+					<select name="" id="sel-sex" class="inputtext" name="sex">
+						<option value="男">男</option>
+						<option value="女">女</option>
+					</select>
+					<input type="text" class="inputtext" id="age" placeholder="年龄">
+					<input type="button" id="regsub" class="regsub" value="注册" onclick="javascript:;">
+					<input type="button" class="regsub" id="uploadapp" value="下载APP" onclick="javascript:;">
+				</form>
+				</div>
+				<div class="logiframe" style="display: none;">
+				<form action="../php/login.php" name="logform" method="post" name="logform">
+					<input type="text" class="inputtext" placeholder="ID" id="log-username">
+					<input type="password" class="inputtext" placeholder="密码" id="log-password">
+					<div class="verify">
+						<input type="text" class="verifyput" placeholder="验证码" name="vaild" id="log-vaild">
+						<img src="../php/captcha.php" id="vaild" alt="">
+					</div>
+					<input type="button" class="regsub" value="登陆" onclick="javascript:;" id="logsub">
+					<input type="button" class="regsub" id="uploadapp" value="下载APP" onclick="javascript:;">
+				</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer"><p><a href=""></a>|<a href=""></a>|<a href=""></a>|<a href=""></a>|<a href="">LNS</a>|<a href=""></a>|<a href=""></a>|<a href="">xxxxxx</a>|<a href="">xxxxxxx</a></p></div>
+	</div>
+</body>
+<script>
+	$("#vaild").click(function(){
+		this.src="../php/captcha.php?id="+Math.random();
+	});
+</script>
+</html>

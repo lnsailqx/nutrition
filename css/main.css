@@ -1,0 +1,138 @@
+body{
+	font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+	font-size: 15px;
+	width:100%;
+	height:100%;
+	background: #f7fafc;
+}
+*{
+	padding:0px;
+	margin:0px;	
+}
+a{
+	text-decoration: none;
+}
+input{
+	border: #c4c4c4 solid 1px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #c4c4c4;  
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #c4c4c4;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #c4c4c4;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #c4c4c4;
+}
+.container{
+	width:100%;
+	height:100%;
+}
+
+
+/*//shownew style*/
+.shownews-photo{
+	width: 100%;
+
+}
+.shownews-photo{
+	width: 100%;
+}
+.shownews-statement{
+	width: 100%;
+
+}
+.shownews-content{
+	width: 100%;
+}
+
+
+
+
+
+.wrap-main{
+	width:300px;
+	margin:0 auto;
+	min-height: 600px;
+}
+.header{
+	width:100%;
+	height:100px;
+	margin: 0 auto;
+	background: #26c6da;
+
+}
+.header img{
+	width: 100px;
+	height: 100px;
+	margin:0px auto;
+	display: block;
+}
+.verifyput{
+
+	height: 38px;
+	margin:8px 2px;
+	float: left;
+	padding-left: 5px;
+}
+.verify img{
+	height: 50px;
+	margin: 2px;
+	float: left;
+}
+.content{
+	background: #f7fafc;
+	height:400px;
+	width: 300px;
+	margin: 0 auto;
+}
+.wrap-lore{
+	width:300px;
+	text-align: center;
+	margin:15px 0px;
+}
+.wrap-lore-cent{
+	display: inline-block;
+	text-align: center;
+	font-size: 18px;
+	width:300px;
+}
+.wrap-lore-cent a{
+	margin: 0px 5px;
+	padding-bottom: 8px;
+	border-bottom: 2px solid #000;
+	color:#000;
+}
+.inputtext{
+	width:290px;
+	height:30px;
+	padding-left: 5px;
+	margin:2px;
+}
+#uploadapp{
+	margin:40px auto;
+}
+#sel-sex{
+	width:295px;
+}
+.regsub{
+	width:298px;
+	background: #0f88eb;
+	height:30px;
+	font-size: 14px;
+	margin-top: 20px;
+	font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+	color: #fff;
+}
+.footer{
+	width:100%;
+	text-align: center;
+}

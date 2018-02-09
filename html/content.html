@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>Dshare</title>
+	<link rel="stylesheet" type="text/css" href="../css/content.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/jquery.searchableSelect.css"/>
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/getSession.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/getTopic.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/getComment.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/switch.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="../js/getFocus.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/getMessage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery.searchableSelect.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="../js/getShowdiet.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/objectForm.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/delFriend.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/getNews.js" type="text/javascript" charset="utf-8"></script>
+
+	
+</head>
+<body>
+	<div class="blank"></div>
+	<div class="header"></div>
+	<div class="fixheader">	
+		<div class="header-wrap">
+			<div id="hand-header-logo">
+				<img class="nav-pic"  alt="" onerror="JavaScript:this.src='../headimg/504603913default.jpg'">
+			</div>
+			<div class="header-logo">
+				<img src="" alt="" id="dshare">
+			</div>
+			<div class="header-lr-wrap">
+				<a href="" class="re-lin">re-lin</a>|
+				<a href="">注销</a>
+			</div>
+
+			<div class="wrap-fa"><i class="fa fa-search  fa-2x "></i></div>
+			<div class="header-search-wrap">
+			<form action="">
+				<input type="text" class="header-search-wrap-text">
+				<input type="submit" value="搜索" class="header-search-wrap-submit">
+			</form>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="nav">
+			<ul>
+				<li class="nav-head" id="hand-nav-head">
+					<div class="nav-head-pic" id="hand-nav-head-pic">
+						<img class="nav-pic"  src="" onerror="JavaScript:this.src='../headimg/504603913default.jpg'">
+					</div>
+					<div class="nav-head-word">
+						<p class="nav-nick">昵称：</p>
+						<p class="nav-id">ID：</p>
+					</div>
+				</li>
+				<li class="nav-btn" id="swi-index" onclick="javascript:;">
+					<div class="nav-btn-pic">
+						<i class="fa fa-bank fa-lg"></i>
+					</div>
+					<div class="nav-btn-word">我的首页</div>
+				</li>
+				<li class="nav-btn" id="swi-news" onclick="javascript:;"><div class="nav-btn-pic">
+					<i class="fa fa-bar-chart-o fa-lg"></i>
+				</div><div class="nav-btn-word">我的新闻</div></li>
+				<li class="nav-btn" id="swi-focus" onclick="javascript:;"><div class="nav-btn-pic">
+					<i class="fa fa-heart fa-lg"></i>
+				</div><div class="nav-btn-word">我的关注</div></li>
+
+				<li class="nav-btn" id="swi-fans" onclick="javascript:;"><div class="nav-btn-pic">
+					<i class="fa fa-camera fa-lg"></i>
+				</div><div class="nav-btn-word">我的粉丝</div></li>
+				<li class="nav-btn" id="swi-share" onclick="javascript:;"><div class="nav-btn-pic">
+					<i class="fa fa-share fa-lg"></i>
+				</div><div class="nav-btn-word">我的分享</div></li>
+				<li class="nav-btn" id="swi-message" onclick="javascript:;"><div class="nav-btn-pic">
+					<i class="fa fa-envelope fa-lg"></i>
+				</div><div class="nav-btn-word">我的消息</div></li>
+				<li class="nav-btn" id="swi-record" onclick="javascript:;"><div class="nav-btn-pic">
+					<i class="fa fa-cloud-upload fa-lg"></i>
+				</div><div class="nav-btn-word">我的记录</div></li>
+				<li class="nav-btn" id="swi-set" onclick="javascript:;"><div class="nav-btn-pic">
+					<i class="fa fa-cog fa-lg"></i>
+				</div><div class="nav-btn-word">设置</div></li>
+				<li class="nav-btn" id="swi-logout" onclick="javascript:;"><div class="nav-btn-pic">
+					<i class="fa fa-power-off fa-lg"></i>
+				</div><div class="nav-btn-word">注销</div></li>
+			</ul>
+		</div>
+		<div class="nav-subject-right">
+			<li class="nav-head">
+					<div class="nav-head-pic">
+						<img class="nav-pic"  >
+					</div>
+					<div class="nav-head-word">
+						<p class="nav-nick">昵称：</p>
+						<p class="nav-id">ID：</p>
+					</div>
+			</li>
+			<li class="nav-head"  id="nav-head-upload">
+				<div class="nav-head-upload">
+					<img src="../img/baidu.png" alt="">
+				</div>
+			</li>
+			<li class="nav-head">
+				<div class="nav-subject-right-news">
+					<div class="nav-subject-right-news-header">
+						热门文章
+					</div>
+					<div class="nav-subject-right-news-body">
+						<div class="nav-subject-right-news-body-object">
+							<a href="">#关于营养的定义#</a>
+							<span>55</span>
+						</div>
+						<div class="nav-subject-right-news-body-object">
+							<a href="">#立冬饮食 宜少咸增苦#</a>
+							<span>43</span>
+						</div>
+						<div class="nav-subject-right-news-body-object">
+							<a href="">#立冬宜食“黑” 晚起待日光#</a>
+							<span>33</span>
+						</div>
+						<div class="nav-subject-right-news-body-object">
+							<a href="">#冬季防寒保暖多吃鱼类#</a>
+							<span>27</span>
+						</div>
+						<div class="nav-subject-right-news-body-object">
+							<a href="">#红薯紫薯该选哪个？#</a>
+							<span>16</span>
+						</div>
+						<div class="nav-subject-right-news-body-object">
+							<a href="">#还要不要食用加碘盐？#</a>
+							<span>9</span>
+						</div>
+						<div class="nav-subject-right-news-body-object">
+							<a href="">#膳食纤维都在哪些食物#</a>
+							<span>7</span>
+						</div>
+						<div class="nav-subject-right-news-body-object">
+							<a href="">#世界卫生组织糖摄入指南#</a>
+							<span>5</span>
+						</div>
+					</div>
+				</div>
+			</li>
+
+		</div>
+		
+		
+		<div class="screen" id="index" style="display: block; ">
+			
+		
+		
+		
+		
+		
+		
+		
+			<!-- <div class="screen-head">首页</div> -->
+			<!-- <div class="screen-index-subject">
+			 <div class="screen-index-subject-left">
+			 	<img src="re-photo">
+			 </div>
+			 <div class="screen-index-subject-right">
+				<div class="screen-index-subject-head">					
+					<div class="screen-index-subject-head-word">
+						<p style="color: #107100;">来自于： 昵称</p>
+						<p style="color: #a7a7a7;font-size: 12px;">时间啊</p>
+					</div>
+				</div>
+				<div class="screen-index-subject-word"><p style="font-size: 14px;">一段文章</p></div>
+				<div class="screen-index-subject-pic"><div class="index-img"><img src="r-photo" alt=""></div></div>
+				<div class="screen-index-subject-gnc">
+					<div class="screen-index-subject-good">						
+						<p>♥ sb</p>
+					</div>
+					<div class="screen-index-subject-comment">
+						<p>nnnnum条评论</p>
+						<button>.....</button>
+					</div>
+				</div>
+			 </div>
+			 <div style="clear: both;"></div>
+			</div> -->
+			<!-- <div class="screen-index-subject">
+			 <div class="screen-index-subject-left">
+			 	<img src="re-photo" >
+			 </div>
+			 <div class="screen-index-subject-right">
+				<div class="screen-index-subject-head">					
+					<div class="screen-index-subject-head-word">
+						<p style="color: #107100;">来自于： 昵称</p>
+						<p style="color: #a7a7a7;font-size: 12px;">时间啊</p>
+					</div>
+				</div>
+				<div class="screen-index-subject-word"><p style="font-size: 14px;">一段文章</p></div>
+				<div class="screen-index-subject-pic"><div class="index-img"><img src="r-photo" alt=""></div></div>
+				<div class="screen-index-subject-gnc">
+					<div class="screen-index-subject-good">						
+						<p>♥ sb</p>
+					</div>
+					<div class="screen-index-subject-comment">
+						<p>nnnnum条评论</p>
+						<button>.....</button>
+					</div>
+				</div>
+			 </div>
+			 <div style="clear: both;"></div>
+			</div> -->
+			<!-- <div class="screen-index-subject">
+			 <div class="screen-index-subject-left">
+			 	<img src="re-photo" >
+			 </div>
+			 <div class="screen-index-subject-right">
+				<div class="screen-index-subject-head">					
+					<div class="screen-index-subject-head-word">
+						<p style="color: #107100;">来自于： 昵称</p>
+						<p style="color: #a7a7a7;font-size: 12px;">时间啊</p>
+					</div>
+				</div>
+				<div class="screen-index-subject-word"><p style="font-size: 14px;">一段文章</p></div>
+				<div class="screen-index-subject-pic"><div class="index-img"><img src="r-photo" alt=""></div></div>
+				<div class="screen-index-subject-gnc">
+					<div class="screen-index-subject-good">						
+						<p>♥ sb</p>
+					</div>
+					<div class="screen-index-subject-comment">
+						<p>nnnnum条评论</p>
+						<button>.....</button>
+					</div>
+				</div>
+			 </div>
+			 <div style="clear: both;"></div>
+			</div> -->
+			
+			
+			
+		</div>
+		<div class="screen" id="news" >
+			
+			
+		</div>
+		
+		<div class="screen" id="focus" >
+			<!-- <div class="screen-head">关注</div> -->
+			
+		</div>
+		<div class="screen" id="fans">
+			<!-- <div class="screen-head">粉丝</div> -->
+			
+			
+		</div>
+		<div class="screen" id="share">
+			<div class="screen-share-subject">
+				<form action="../php/dietUpload.php" enctype="multipart/form-data" method="post"  id="share-form-object">
+					<textarea name="message" cols="30" rows="10" class="screen-share-subject-text" id="screen-share-text" placeholder="请输入文本"></textarea>
+					<div class="screen-share-subject-wrap">			
+						<!-- <input type="file" name="file"  class="screen-share-subject-wrap-file"> -->
+						<div class="screen-share-subject-wrap-imgbox"><img src="" class="preview"></div>
+						<!-- <button class="screen-share-subject-wrap-btn" id="share-form-submit">发送</button>
+						<button class="screen-share-subject-wrap-reset">清除</button> -->
+						<div style="clear: both;"></div>
+						<input type="file" name="file"  class="screen-share-subject-wrap-file">
+						<button class="screen-share-subject-wrap-btn" id="share-form-submit">发送</button>
+						<button class="screen-share-subject-wrap-reset">清除</button>
+					</div>	
+				</form>
+			</div>
+		</div>
+		<div class="screen" id="message">
+			<!-- <div class="screen-head">消息</div> -->
+			
+		</div>
+		<div class="screen" id="record">
+			<!-- <div class="screen-head">记录</div> -->
+			<!-- <div class="screen-record-switch">
+				<div class="screen-record-switch-wrap">
+				<div class="screen-record-switch-diet" onclick="javascript:;">记录</div>
+				<div class="screen-record-switch-show" onclick="javascript:;">查看</div>
+				<div style="clear: both;"></div>
+				</div>
+			</div> -->
+			
+			
+			<div class="screen-record-subject-show" style="display: block;">
+				<span class="screen-record-subject-show-datesel">
+				 <div class="screen-record-subject-show-datesel-wrap">
+					<span class="screen-record-subject-show-datesel-space">选择日期:</span>
+					<select name="year" id="show-year">
+						<option value="2016">2016</option>
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+						<option value="2019">2019</option>
+					</select>
+					<select name="month" id="show-month">
+
+					</select>
+					<select name="day" id="show-day">
+
+					</select>
+					<span class="screen-record-subject-show-datesel-sub" onclick="javascript:;">确认</span>
+				 </div>
+				</span>
+				<div class="screen-record-subject-diet-wrap">
+					<div class="screen-record-subject-diet-wrap-title">饮食</div>
+					<div class="screen-record-subject-diet-wrap-box">早餐：<span class="subject-show-bre"></span></div>
+					<div class="screen-record-subject-diet-wrap-box">午餐：<span class="subject-show-lun"></span></div>
+					<div class="screen-record-subject-diet-wrap-box">晚餐：<span class="subject-show-din"></span></div>
+					<div class="screen-record-subject-diet-wrap-box">零食：<span class="subject-show-lingshi"></span></div>
+					<div class="screen-record-subject-diet-wrap-box">点心：<span class="subject-show-dianxing"></span></div>
+					<div class="screen-record-subject-diet-wrap-box">其他：<span class="subject-show-qita"></span></div>
+				</div>
+			</div>
+		</div>
+		<div class="screen" id="report">
+			<!-- <div class="screen-head">报告</div> -->
+		</div>
+		<div class="screen" id="set">
+			<!-- <div class="screen-head">设置</div> -->
+			<!-- <div class="screen-reset-subject">
+				<form action="">
+					<input type="file" class="screen-reset-subject-file">
+					<img src="" alt="" id="head-preview" class="screen-reset-subject-img">
+					<div class="screen-reset-subject-wrap">
+						<input type="text" name="ID" placeholder="ID">
+						<input type="text" name="昵称" placeholder="昵称" onclick="clearFile(".screen-reset-subject-file")">
+						<button>确认</button>
+					</div>
+				</form>
+			</div> -->
+		</div>
+		<div style="clear: both;width: 100%;height:1px;"></div>
+	</div>
+
+	<script type="text/template" id="html_template">
+		<div class="screen-index-subject">
+			 <div class="screen-index-subject-left">
+			 	<img src="re-photo" onerror="JavaScript:this.src='../headimg/504603913default.jpg'">
+			 </div>
+			 <div class="screen-index-subject-right re-dingwei">
+				<div class="screen-index-subject-head">					
+					<div class="screen-index-subject-head-word">
+						<p style="color: #107100;">昵称</p>
+						<p style="color: #a7a7a7;font-size: 12px;">时间啊</p>
+					</div>
+				</div>
+				<div class="screen-index-subject-word"><p style="font-size: 14px;">一段文章</p></div>
+				<div class="screen-index-subject-pic"><div class="index-img"><img src="r-photo" alt=""></div></div>
+				<div class="screen-index-subject-gnc">
+					<div class="screen-index-subject-good">						
+						<p>♥ sb</p>
+					</div>
+					<div class="screen-index-subject-comment">
+						<p>nnnnum条评论</p>
+						<button  onclick="getComment(re-topicid)">.....</button>
+					</div>
+				</div>
+			 </div>
+			 <div style="clear:both;"></div>
+		</div>
+    </script>
+    <script type="text/template" id="html_template_news">
+		<a class="screen-news-subject"   href="read.html?newsid=re-newsid" target="_blank">
+				<div class="screen-news-subject-photo">
+					<img src="re-src" alt="">
+				</div>
+				<div class="screen-news-subject-right">
+					<div class="screen-news-subject-right-title">
+						<p>re-title</p>
+					</div>
+					<div class="screen-news-subject-right-time">
+						<p>re-time</p>
+					</div>
+					<div class="screen-news-subject-right-like">
+						<p>♥  re-like</p>
+					</div>
+				</div>
+				
+
+			</a>
+    </script>
+    <script type="text/template" id="html_template_focus">
+    	<div class="screen-focus-subject">
+				<div class="screen-focus-subject-photo">
+					<img src="re-photo" onerror="JavaScript:this.src='../headimg/504603913default.jpg'">
+				</div>
+				<div class="screen-focus-subject-word">
+					<p class="screen-focus-subject-nick">昵称：nickname</p>
+					<p class="screen-focus-subject-id">id：nickid</p>
+				</div>
+				<div class="screen-focus-subject-btn">
+					<button class="deletefriend" name="re-username">取消</button>
+				</div>
+				
+
+			</div>
+    </script>
+    <script type="text/template" id="html_template_fans">
+    	<div class="screen-fans-subject">
+				<div class="screen-fans-subject-photo">
+					<img src="re-photo" onerror="JavaScript:this.src='../headimg/504603913default.jpg'">
+				</div>
+				<div class="screen-fans-subject-word">
+					<p class="screen-fans-subject-nick">昵称：nickname</p>
+					<p class="screen-fans-subject-id">id：nickid</p>
+				</div>
+				<div class="screen-fans-subject-btn">
+					<button>已关注</button>
+				</div>
+				
+			</div>
+    </script>
+    <script type="text/template" id="html_template_message">
+    	<div class="screen-message-subject">
+				<p>
+					<span style="color: #01af49">re-sender</span>
+					<span>re-movement</span>
+					<span style="color: #01af49">re-receiver</span>
+					<span style="float: right;">re-posttime</span>
+				</p>				
+			</div>
+    </script>
+   
+     <script type="text/template" id="comment-mod">
+    	<p class="comment-css">re-commentor re-type re-becommentor :re-message</p>
+    </script>
+    <script>
+    function thisChange(){
+    	$(this).parent('div').remove();
+		} 
+
+    function clearFile(file){
+    	var ofile=$(file);
+		ofile.after(ofile.clone().val(""));      
+		ofile.remove(); 
+		} 
+
+    	 function getObjectURL(file) {
+ 			var url = null ; 
+ 			if (window.createObjectURL!=undefined) { // basic
+  			url = window.createObjectURL(file) ;
+ 			} else if (window.URL!=undefined) { // mozilla(firefox)
+  			url = window.URL.createObjectURL(file) ;
+ 			} else if (window.webkitURL!=undefined) { // webkit or chrome
+  			url = window.webkitURL.createObjectURL(file) ;
+ 			}
+ 			return url ;
+		}
+		$(".screen-share-subject-wrap-file").change(function(){
+ 		var objUrl = getObjectURL(this.files[0]) ;
+ 		console.log("objUrl = "+objUrl) ;
+ 		if (objUrl) {
+  		$(".preview").attr("src",objUrl);
+ 		}
+		}) ;
+		$(".screen-reset-subject-file").change(function(){
+ 		var objUrl = getObjectURL(this.files[0]) ;
+ 		console.log("objUrl = "+objUrl) ;
+ 		if (objUrl) {
+  		$("#head-preview").attr("src",objUrl);
+ 		}
+		}) ;
+    </script>
+</body>
+</html>

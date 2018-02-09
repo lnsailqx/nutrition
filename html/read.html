@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>Dshare</title>
+	<link rel="stylesheet" type="text/css" href="../css/content.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/jquery.searchableSelect.css"/>
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/getSession.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+	@media all and (max-width:800px) {
+	body{
+		background: none;
+	}
+	.contianer{
+		background: none;
+	}
+	.wrap-shown{
+		background: none;
+	}
+}
+	</style>
+	<script>
+ 		function photoDeal(){
+ 			var height=$(".photodeal").height();
+ 			var width=$(".photodeal").width();
+ 			
+ 			if(995*height/width>350){
+ 				var owidth=350*width/height;
+ 				$(".photodeal").css("width",owidth+"px");
+ 				$(".photodeal").css("height","350px");
+ 			}else{
+ 				$(".photodeal").css("width","100%");
+ 				$(".photodeal").css("height","auto");
+ 			}
+
+ 			
+ 			
+ 		}
+ 		(function ($) {
+                $.getUrlParam = function (name) {
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                    var r = window.location.search.substr(1).match(reg);
+                    if (r != null) return unescape(r[2]); return null;
+                }
+            })(jQuery);
+    //        
+            $(document).on('click','.goodcount-news',function(){
+            	var newsid = $.getUrlParam('newsid');
+		
+		$.ajax({
+					url:'../php/goodcount.php',
+					method:'post',
+					data:{
+						newsid:newsid
+
+					},
+					success:function(result){
+						alert(result);
+							
+						}
+
+					
+				});
+
+	})
+
+ 		jQuery(document).ready(function($) {
+ 			photoDeal();
+ 			
+ 			var newsid = $.getUrlParam('newsid');
+ 			$.ajax({
+					url:'../php/read.php',
+					method:'post',
+					data:{
+						newsid:newsid
+
+					},
+					success:function(result){
+						$json=eval("("+result+")");
+						console.log($json);
+						for(var i=0;i<$json.length;i++){
+							
+							var content = document.getElementById('html_template_mmod').innerHTML;
+							content = content.replace("re-src",$json[i].coverphoto);
+							content = content.replace("re-source",$json[i].source);
+							content = content.replace("re-title",$json[i].title);
+							content = content.replace("re-posttime",$json[i].posttime);
+							content = content.replace("re-likecount",$json[i].likecount);
+							content = content.replace("re-content",$json[i].content);
+							content = content.replace("re-newsid",$json[i].newsid);
+							$(".container").append(content);
+							
+							
+
+							
+						}
+
+					}
+				});
+ 			
+ 		});
+ 	</script>
+	
+	
+	<script src="../js/switch.js" type="text/javascript" charset="utf-8"></script>	
+	
+
+	
+</head>
+<body>
+	<div class="blank"></div>
+	<div class="header"></div>
+	<div class="fixheader">	
+		<div class="header-wrap">
+			<div id="hand-header-logo">
+				<img class="nav-pic"  alt="" onerror="JavaScript:this.src='../headimg/504603913default.jpg'">
+			</div>
+			<div class="header-logo">
+				<img src="" alt="" id="dshare">
+			</div>
+			<div class="header-lr-wrap">
+				<a href="" class="re-lin">re-lin</a>|
+				<a href="">注销</a>
+			</div>
+
+			<div class="wrap-fa"><i class="fa fa-search  fa-2x "></i></div>
+			<div class="header-search-wrap">
+			<form action="">
+				<input type="text" class="header-search-wrap-text">
+				<input type="submit" value="搜索" class="header-search-wrap-submit">
+			</form>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="background-color: #f0f0f0;margin-bottom: 100px;">
+		
+	</div>
+
+	
+ <script type="text/template" id="html_template_mmod">
+		<div class="wrap-shown">
+			<!-- <div class="shownews-photo">
+				<img src="re-src" alt="" class="photodeal">
+			</div> -->
+			<div class="shownews-statement">
+				<div class="shownews-statement-title">
+					re-title
+				</div>
+				<div class="shownews-statement-source"><p>re-source</p></div>
+				<div class="shownews-statement-time"><p>re-posttime</p></div>
+				<div class="shownews-statement-good"></div>
+				<div class="shownews-statement-like"><p>♥ re-likecount </p></div>
+				<div style="width: 100%;height: 1px;clear: both;"></div>
+
+			</div>
+			<div class="shownews-content">
+				<p>re-content"</p>
+				
+			</div>
+			<div class="goodcount-news" name="re-newsid" onclick="javascript:;"><p>点赞</p></div>
+		</div>
+ </script>
+    
+
+    
+
+    	 
+</body>
+</html>
